@@ -1,3 +1,4 @@
+//DAY 2 TAKEHOME
 const FIRST = prompt("What's your first name?", "John");
 const LAST = prompt("What's your last name?", "Doe");
 console.log(FIRST);
