@@ -3,6 +3,5 @@ const LAST = prompt("What's your last name?", "Doe");
 console.log(FIRST);
 alert(LAST);
 
-let birthday = prompt("What's your birthday?");
-new Date(birthday);
-confirm("Is $Date correct?");
+const BIRTHDAY = new Date(prompt("When's your birthday?"));
+const REPLY = confirm(`Is ${BIRTHDAY} correct?`);
