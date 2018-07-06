@@ -4,4 +4,4 @@ console.log(FIRST);
 alert(LAST);
 
 const BIRTHDAY = new Date(prompt("When's your birthday?"));
-const REPLY = confirm(`Is ${BIRTHDAY} correct?`);
+confirm(`Is ${BIRTHDAY} correct?`);
