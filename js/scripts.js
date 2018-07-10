@@ -5,5 +5,10 @@ console.log(FIRST);
 alert(LAST);
 
 const BIRTHDAY = new Date(prompt("When's your birthday?"));
-confirm(`Is ${BIRTHDAY} correct?`);
-alert(`Thanks! I have your birthday as ${BIRTHDAY}.`);
+const isCorrect = confirm(`Is ${BIRTHDAY} correct?`);
+if (isCorrect) {
+  alert(`Thanks! I have your birthday as ${BIRTHDAY}.`);
+}
+else {
+  
+}
