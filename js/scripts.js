@@ -30,5 +30,7 @@ switch(favColor.toLowerCase()) {
   case "white":
     alert(`${name}'s favorite color is white.`);
     break;
-  default "gray":
+  default:
+    alert(`Come on, ${name}, stop trying to be original.`);
+    break;
 }
