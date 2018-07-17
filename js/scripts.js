@@ -72,8 +72,53 @@ favMovies.push(arrayOne, arrayTwo, arrayThree, arrayFour, arrayFive);
 
 let titles = [];
 titles.push(favMovies[0][0], favMovies[1][0], favMovies[2][0], favMovies[3][0], favMovies[4][0]);
-alert(titles);
+// alert(titles);
 
 let favAndLeast = [];
 favAndLeast.push(favMovies[0], favMovies[3]);
-console.log(favAndLeast);
+// console.log(favAndLeast);
+
+// LOOPS
+// for (let i = 0; i < 11; i++) { // (declare variable; condition; modifier)
+//   console.log(`The number is ${i * 10}.`);
+// }
+// --- Make SURE your condition will EVENTUALLY be FALSE!!!
+const colors = ['blue', 'red', 'green', 'yellow'];
+
+// for (let index = 0; index < colors.length; index++) {
+//   console.log(colors[index]);
+// }
+
+// let counter = 0;
+// while (counter < 5) {
+//   console.log(`before ${counter}`);
+//   counter++;
+//   console.log(`after ${counter}`);
+// }
+
+// FOR EACH allows easy access to INDEX values
+// const captains = ['Kirk', 'Picard', 'Sisko', 'Janeway', 'Lorca'];
+// captains.forEach((captain, index) => { // (value, index)
+//   console.log(captain, index); // displays each value in the array, plus its index #
+// } );
+
+// FOR...OF is for ARRAYS
+// const captains = ['Kirk', 'Picard', 'Sisko', 'Janeway', 'Lorca'];
+// for (let captain of captains) { // (let (value) of (array))
+//   console.log(`Hello Captain ${captain}.`); // displays each value OF the array
+// }
+
+// FOR...IN is for OBJECTS
+// const me = {
+//   firstName: 'Andy',
+//   lastName: 'Callahan',
+//   age: 26
+// };
+// for (let property in me) {
+//   console.log(me[property]);
+// }
+
+// TRY IT OUT #3
+for (let i = 0; i < favMovies.length; i++) {
+  if(favMovies[i][0] === "Pokemon") alert(`${favMovies[i][0]}, ${favMovies[i][1]}`);
+}
