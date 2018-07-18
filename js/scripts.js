@@ -1,3 +1,24 @@
+//DAY 5 TRY-IT-OUT PART ONE
+// let dogYears = dogAge => {
+//   alert(dogAge * 7);
+// };
+// dogYears(7);
+
+//DAY 5 TRY-IT-OUT PART TWO
+let lifeSupply = (ageNow, amtUsed) => {
+  amtNeeded = (80 - ageNow) * amtUsed;
+  alert(`You will need ${amtNeeded} to last you until you are 80.`);
+};
+lifeSupply(26, 2);
+//-----ALTERNATIVE DYNAMIC AGING
+let ageDead = prompt('How long do you think you will live?')
+
+
+
+
+
+
+
 // ANONYMOUS FUNCTION
 //FUNCTION DEFINITION (NOT Invocation)
 // function (string) { //Inside the () is where the ARGUMENTS/PARAMETERS go
