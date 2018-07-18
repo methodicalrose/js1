@@ -80,3 +80,4 @@ logString('Hello cats!');
 //----IMPLICIT RETURN
 string => (string.toUpperCase()); //Automatically returns
 string => string.toUpperCase(); //Outer parentheses are optional
+
