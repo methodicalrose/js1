@@ -10,7 +10,7 @@ let dogYears = dogAge => {
 // };
 
 //-----ALTERNATIVE DYNAMIC AGING
-let lifeSupply = (ageNow, dailyUse) => {
+let lifeSupply = (ageNow, dailyUse, ageDead) => {
   amtNeeded = (ageDead - ageNow) * (dailyUse * 365);
   alert(`You will need ${amtNeeded} items to last you until you are ${ageDead}.`);
 };
