@@ -8,10 +8,8 @@ let dogYears = dogAge => {
 //   amtNeeded = (80 - ageNow) * (dailyUse * 365);
 //   alert(`You will need ${amtNeeded} to last you until you are 80.`);
 // };
-// lifeSupply(26, 2);
 
 //-----ALTERNATIVE DYNAMIC AGING
-let ageDead = parseInt(prompt('What age do you think you will die?'));
 let lifeSupply = (ageNow, dailyUse) => {
   amtNeeded = (ageDead - ageNow) * (dailyUse * 365);
   alert(`You will need ${amtNeeded} items to last you until you are ${ageDead}.`);
@@ -80,4 +78,3 @@ logString('Hello cats!');
 //----IMPLICIT RETURN
 string => (string.toUpperCase()); //Automatically returns
 string => string.toUpperCase(); //Outer parentheses are optional
-
