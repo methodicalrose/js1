@@ -57,6 +57,7 @@
 
 //FAT ARROW FUNCTIONS
 //----BASIC IMPLEMENTATION
+<<<<<<< HEAD
 // (logFunction, alertFunction) => { //NO Function keyword
 //   logFunction('Hello world');
 //   alertFunction('Goodbye, friends!');
@@ -76,3 +77,25 @@
 // //----IMPLICIT RETURN
 // string => (string.toUpperCase()); //Automatically returns
 // string => string.toUpperCase(); //Outer parentheses are optional
+=======
+(logFunction, alertFunction) => { //NO Function keyword
+  logFunction('Hello world');
+  alertFunction('Goodbye, friends!');
+};
+
+//----ONLY 1 ARGUMENT
+string => { //Parentheses are optional
+  console.log(string);
+};
+
+//----FUNCTION EXPRESSION OF FAT ARROW
+let logString = string => { //Function Expressions allow functions to be named
+  console.log(string);
+};
+logString('Hello cats!');
+
+//----IMPLICIT RETURN
+string => (string.toUpperCase()); //Automatically returns
+string => string.toUpperCase(); //Outer parentheses are optional
+
+>>>>>>> 3ea37ec8d232fa06fd1757dfff8e6523a6507b24
