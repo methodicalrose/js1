@@ -1,26 +1,24 @@
-//DAY 5 TRY-IT-OUT PART ONE
-let dogYears = dogAge => {
-  alert(dogAge * 7);
-};
-
-//DAY 5 TRY-IT-OUT PART TWO
-// let lifeSupply = (ageNow, dailyUse) => {
-//   amtNeeded = (80 - ageNow) * (dailyUse * 365);
-//   alert(`You will need ${amtNeeded} to last you until you are 80.`);
+// //DAY 5 TRY-IT-OUT PART ONE
+// let dogYears = dogAge => {
+//   alert(dogAge * 7);
 // };
-
-//-----ALTERNATIVE DYNAMIC AGING
-let lifeSupply = (ageNow, dailyUse, ageDead) => {
-  amtNeeded = (ageDead - ageNow) * (dailyUse * 365);
-  alert(`You will need ${amtNeeded} items to last you until you are ${ageDead}.`);
-};
-
-
-
-
-
-
-
+//
+// //DAY 5 TRY-IT-OUT PART TWO
+// let lifeSupply = (ageNow, dailyUse, ageDead) => {
+//   if(isNaN(ageNow) && isNaN(dailyUse)) {
+//     alert("Please give me a number!");
+//     let ageNowSecond = prompt("How old are you?");
+//     let dailyUseTwo = prompt("How many do you use per day?");
+//     let ageDead = prompt("What age will you die?");
+//     lifeSupply(ageNowSecond, dailyUseSecond, ageDead);
+//   } else {
+//       if(ageNow < ageDead) {
+//         let amtNeeded = (ageDead - ageNow) * (dailyUse * 365);
+//         alert(`You will need ${amtNeeded} to last you until you are ${ageDead}.`);
+//       } else {
+//           alert("Um.. you're dead.");
+//         }
+// };
 
 // ANONYMOUS FUNCTION
 //FUNCTION DEFINITION (NOT Invocation)
@@ -59,22 +57,22 @@ let lifeSupply = (ageNow, dailyUse, ageDead) => {
 
 //FAT ARROW FUNCTIONS
 //----BASIC IMPLEMENTATION
-(logFunction, alertFunction) => { //NO Function keyword
-  logFunction('Hello world');
-  alertFunction('Goodbye, friends!');
-};
-
-//----ONLY 1 ARGUMENT
-string => { //Parentheses are optional
-  console.log(string);
-};
-
-//----FUNCTION EXPRESSION OF FAT ARROW
-let logString = string => { //Function Expressions allow functions to be named
-  console.log(string);
-};
-logString('Hello cats!');
-
-//----IMPLICIT RETURN
-string => (string.toUpperCase()); //Automatically returns
-string => string.toUpperCase(); //Outer parentheses are optional
+// (logFunction, alertFunction) => { //NO Function keyword
+//   logFunction('Hello world');
+//   alertFunction('Goodbye, friends!');
+// };
+//
+// //----ONLY 1 ARGUMENT
+// string => { //Parentheses are optional
+//   console.log(string);
+// };
+//
+// //----FUNCTION EXPRESSION OF FAT ARROW
+// let logString = string => { //Function Expressions allow functions to be named
+//   console.log(string);
+// };
+// logString('Hello cats!');
+//
+// //----IMPLICIT RETURN
+// string => (string.toUpperCase()); //Automatically returns
+// string => string.toUpperCase(); //Outer parentheses are optional
