@@ -1,7 +1,7 @@
 //TRY IT OUT DAY 6
-let btn = document.querySelector(#btn);
-let bestDiv = document.querySelector(#bestDiv);
-let superH = document.querySlector(#superH);
+let btn = document.querySelector('#btn');
+let bestDiv = document.querySelector('#bestDiv');
+let superH = document.querySelector('#superH');
 
 btn.addEventListener(
   "click",
