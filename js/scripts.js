@@ -1,64 +1,28 @@
-//TRY IT OUT DAY 6
-let btn = document.querySelector('#btn');
-let bestDiv = document.querySelector('#bestDiv');
-let superH = document.querySelector('#superH');
+let h3 = document.querySelector('#temp');
+let scale = prompt("What scale (C or F) do you want to use?", "F or C");
+let temp = prompt("How hot is it?", "99");
 
-btn.addEventListener(
-  "click",
-  ev => {
-    alert("You clicked me!");
+function convertTemp(scale, temp) {
+  console.log(scale, temp);
+  scale = scale.toLowerCase();
+  let returnVal;
+  let oppositeVal = scale === 'c' ? 'Fahrenheit' : 'Celcius';
+  temp = parseInt(temp);
+  if(!isNaN(temp)) {
+    returnVal = scale === 'c' ? (1.8 * temp) + 32 : (5 / 9) * (temp - 32);
+    h3.innerText = `Your temperature is ${returnVal} ${oppositeVal}`;
+  } else {
+    let scale = prompt("What scale (C or F) do you want to use?", "F or C");
+    let temp = prompt("How hot is it?", "99");
+    convertTemp(scale, temp);
   }
-);
-bestDiv.addEventListener(
-  "mouseenter",
-  ev => {
-    bestDiv.style.backgroundColor = "#e4c3f6";
-  }
-);
-superH.addEventListener(
-  "keyup",
-  ev => {
-    superH.style.color = "#c3f4";
-  }
-);
+}
 
+convertTemp(scale, temp);
 
-
-
-
-
-
-
-
-// //QUERYING THE DOM
-// //-----Older Methods
-// const body = document.getElementsByTagName("body"); //Arguments always denoted as a string
-// console.log(body[0]); //Indexed for clarity
-// //---This will return all elements within the body tag as an Array
-//
-// const header = document.getElementsByClassName("heading");
-// console.log(header[0]); //Also indexed, multiple elements may use the same class
-//
-// const paragraph = document.getElementById("paragraph1");
-// console.log(paragraph); //Not indexed - only one of each ID
-// //---ID's are used almost exclusively for the purpose of JavaScript
-//
-// //-----Newer Methods
-// //These target the first instance of your argument
-// let div = document.querySelector(".test-class"); //Use class and ID
-// let div2 = document.querySelector("#test_id");   //targeting conventions
-//
-// //This targets all instances of your argument
-// let divs = document.querySelectorAll("div");
-//
-// //EVENT LISTENERS
-// div.addEventListener(
-//   "mouseover", //Event name
-//    ev => { //ES6 method
-//     div.style.backgroundColor = "#e40007"; //Inline styling
-//    }
-//
-//   // function(ev) { //ES5 method
-//   //   div.style.backgroundColor = "#e40007";
-//   // }
-// );
+h3.addEventListener('click', (e) => {
+  let valueArr = e.target.innerText.split(' ');
+  scale = valueArr[valueArr.length - 1] === 'Celcius' ? 'C' : 'F';
+  temp = valueArr[valueArr.length - 2];
+  convertTemp(scale, temp);
+});
