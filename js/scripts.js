@@ -1,80 +1,52 @@
-//DAY 5 TRY-IT-OUT PART ONE
-let dogYears = dogAge => {
-  alert(dogAge * 7);
-};
+//TAKEHOME DAY 7
+let div = document.querySelector(".div");
+let button = document.createElement("button");
+button.textContent = "Click Me";
+div.appendChild(button);
 
-//DAY 5 TRY-IT-OUT PART TWO
-// let lifeSupply = (ageNow, dailyUse) => {
-//   amtNeeded = (80 - ageNow) * (dailyUse * 365);
-//   alert(`You will need ${amtNeeded} to last you until you are 80.`);
-// };
+button.addEventListener("click", (e) => {
+  let title = prompt("Pick a title.");
+  let h1 = document.createElement("h1");
+  h1.className = "text-center";
+  h1.textContent = title;
 
-//-----ALTERNATIVE DYNAMIC AGING
-let lifeSupply = (ageNow, dailyUse, ageDead) => {
-  amtNeeded = (ageDead - ageNow) * (dailyUse * 365);
-  alert(`You will need ${amtNeeded} items to last you until you are ${ageDead}.`);
-};
+  let userDay = prompt("Tell me what you did today.");
+  let pTag = document.createElement("p");
+  pTag.textContent = userDay;
+  pTag.className = "justify";
 
+  let favColor = prompt("What's your favorite color? Choose red, orange, yellow, green, blue, purple, pink, brown, or black.");
 
-
-
-
-
-
-
-// ANONYMOUS FUNCTION
-//FUNCTION DEFINITION (NOT Invocation)
-// function (string) { //Inside the () is where the ARGUMENTS/PARAMETERS go
-//   return string.toUpperCase(); //Data transformation and return
-// }; //End of the function
-
-//NAMED FUNCTIONS
-//FUNCTION DEFINITION
-// function addTwo(num) {
-//   return num + 2;
-// };
-
-//CALL the Function
-// console.log(addTwo(4)); //You can check the results of your FUNCTION
-//
-// let newNum = addTwo(4); //You can use your function as a variable value
-
-// function logMyString(string) {
-//   console.log(string); //Does not Return... does nothing outside of this function
-// };
-// logMyString('I am the best.'); //Nothing gets logged
-//
-// function alertsAd() { //You can have a function without parameters
-//   alert('We have a sale');
-// };
-// alertsAd(); //Calls the function - no values necessary
-
-//RECURSIVE FUNCTIONS
-// let i = 0;
-// function iCallMyself() {
-//   console.log(i);
-//   i++;
-//   iCallMyself();
-// }; //---DON'T DO IT!!! It will call itself and cause an infinite loop
-
-//FAT ARROW FUNCTIONS
-//----BASIC IMPLEMENTATION
-(logFunction, alertFunction) => { //NO Function keyword
-  logFunction('Hello world');
-  alertFunction('Goodbye, friends!');
-};
-
-//----ONLY 1 ARGUMENT
-string => { //Parentheses are optional
-  console.log(string);
-};
-
-//----FUNCTION EXPRESSION OF FAT ARROW
-let logString = string => { //Function Expressions allow functions to be named
-  console.log(string);
-};
-logString('Hello cats!');
-
-//----IMPLICIT RETURN
-string => (string.toUpperCase()); //Automatically returns
-string => string.toUpperCase(); //Outer parentheses are optional
+  switch(favColor.toLowerCase()) {
+    case "red":
+      pTag.classList.add("red-bg");
+      break;
+    case "orange":
+      pTag.classList.add("orange-bg");
+      break;
+    case "yellow":
+      pTag.classList.add("yellow-bg");
+      break;
+    case "green":
+      pTag.classList.add("green-bg");
+      break;
+    case "blue":
+      pTag.classList.add("blue-bg");
+      break;
+    case "purple":
+      pTag.classList.add("purple-bg");
+      break;
+    case "pink":
+      pTag.classList.add("pink-bg");
+      break;
+    case "brown":
+      pTag.classList.add("brown-bg", "white-text");
+      break;
+    case "black":
+      pTag.classList.add("black-bg", "white-text");
+      break;
+    default:
+      alert("Error");
+      break;
+  }
+});
